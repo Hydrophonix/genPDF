@@ -1,0 +1,24 @@
+{
+  "name": "generatepdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "phantom": "./node_modules/.bin/phantomjs make.js index.html test.pdf",
+    "easy": "./node_modules/.bin/phantomjs test.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.5.7",
+    "express": "~4.16.2",
+    "morgan": "~1.9.0",
+    "phantom": "^4.0.12",
+    "phantomjs": "^2.1.7",
+    "serve-favicon": "~2.4.5"
+  }
+}

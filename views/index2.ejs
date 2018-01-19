@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="">
+  <div class="wrapper">
+
+
+  <div class="form">
+    <header>
+      <div class="header">Найменування замовника:</div>
+      <div class="header">Найменування виконавця:</div>
+      <div class="organization">Генеральна прокуратура України</div>
+      <div class="organization">
+        <p>Київський науково-дослідний інститут судових експертизи</p>
+        <p>Міністерства юстиції України</p>
+      </div>
+      <div class="adress">адреса: вул. Смоленська, 6, м. Київ, 03057</div>
+      <div class="adress">адреса: вул. Смоленська, 6, м. Київ, 03057</div>
+    </header>
+    <main>
+      <div class="doc-name">
+        <span>АКТ</span>
+        <p>здачі-приймання висновку експерта № 12345/18-35</p>
+        <p>у кримінальному провадженні № 42016000000003536</p>
+        <p>за постановою слідчого Важливого Д.Д.</p>
+        <p>від 01.01.2018</p>
+      </div>
+
+      <div class="date">01.01.2018</div>
+
+      <div class="parties">
+        <div class="text">Представник виконавця, судовий експерт</div>
+        <div>
+          <div class="underline"><input name="expert" type="text" id="testIn"></div>
+          <div class="underline-text">(посада, ПІБ)</div>
+        </div>
+        <div class="text">з однієї сторони та представник замовника</div>
+        <div>
+          <div class="underline"><input name="zakaz" type="text" id="testIn"></div>
+          <div class="underline-text">(посада, ПІБ, доручення)</div>
+        </div>
+      </div>
+
+      <div class="main-text">
+        з другої сторони, склали цей акт у тому, що ціна експертизи (дослідження) визначена на підставі вартості
+        однієї експертогодини відповідно до Інструкції про порядок і розміри відшкодування витрат та виплати
+        винагороди особам, що викликаються до органів дізнання, попереднього слідства, прокуратури, суду або
+        органів, у провадженні яких перебувають справи про адміністративні правопорушення, та виплати державним
+        науково-дослідним установам судової експертизи за виконання їх працівниками функцій експертів і спеціалістів,
+        затвердженої постановою Кабінету Міністрів України від 01.07.1996 р. №710.
+      </div>
+
+      <div class="table">
+        <div class="difficulty">Категорія складності:</div>
+        <div class="underline row1">середня (143,00 грн/год)</div>
+        <div class="start-work">Приступив до роботи:</div>
+        <div class="underline row2-1">01.01.1745</div>
+        <div class="end-work">Закінчив роботу:</div>
+        <div class="underline row2-2">01.01.2013</div>
+        <div class="time-spent">Затрачено годин:</div>
+        <div class="underline row3">666</div>
+        <div class="price">Ціна складає:</div>
+        <div>
+          <div class="underline row4">1980,00 (666 &times; 143,00)</div>
+          <div class="underline-text">(затрачений час * на вартість експертогодини+20%)</div>
+        </div>
+        <div class="underline row5">(одна тисяча дев'ятсот вісімдесят грн 00 коп)</div>
+        <div class="paid">Наперед сплачено:</div>
+        <div>
+          <div class="underline row6"></div>
+          <div class="underline-text">(сума вказується цифрами і прописом)</div>
+        </div>
+        <div class="need-to-pay">Належить до перерахування:</div>
+        <div>
+          <div class="underline row7"></div>
+          <div class="underline-text">(сума вказується цифрами і прописом)</div>
+        </div>
+        <div class="pdv">ПДВ 20%</div>
+        <div>
+          <div class="underline row8"></div>
+          <div class="underline-text">(сума вказується цифрою)</div>
+        </div>
+      </div>
+</main>
+      <footer>
+        <div class="date">
+          Замовник не має претензій щодо повернення матеріалів та речових доказів
+        </div>
+        <div class="signatures">
+          <div class="date work-done">Роботу здав:</div>
+          <div class="expert">_____________ Тимко Є.В.</div>
+          <div class="date work-accepted">Роботу прийняв:</div>
+          <div>_____________</div>
+        </div>
+      </footer>
+  </div>
+
+  <button class="link" type="submit" id="link">GEN PDF</button>
+  </div>
+  <script type="text/javascript" src="/js/script.js"></script>
+
+</body>
+
+</html>

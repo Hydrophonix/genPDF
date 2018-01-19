@@ -1,0 +1,234 @@
+body {
+  background: linear-gradient(to top, darkgrey 0%, lightgrey 100%);
+  padding: 20px 0 200px;
+}
+
+.form {
+  width: 21cm;
+  height: 29.6cm;
+  padding: 2cm 1cm 1cm 3cm;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Times New Roman';
+  font-size: 12pt;
+  font-weight: 200;
+}
+
+header,
+.table,
+.parties {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+
+}
+
+.link {
+  background-color: lightblue;
+  width: 100px;
+  height: 50px;
+  font-size: 16pt;
+}
+div {
+  /* border: 1px solid black; */
+}
+
+.header {
+  width: 8.5cm;
+  height: 1.2cm;
+  font-size: 10pt;
+  font-weight: bold;
+  text-decoration: underline;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+.organization {
+  width: 8.5cm;
+  height: 3cm;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.adress {
+  width: 8.5cm;
+  height: 2cm;
+  font-size: 11pt;
+  text-align: center;
+  vertical-align: top;
+}
+
+.doc-name {
+  height: 4cm;
+  text-align: center;
+  font-size: 14pt;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.doc-name span {
+  font-size: 16pt;
+}
+
+.date {
+  height: 1cm;
+  font-weight: bold;
+}
+
+.parties .text {
+  height: 0.5cm;
+  width: 8cm;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: flex-end;
+}
+
+.parties .underline,
+.parties .underline-text {
+  width: 9cm;
+  height: 0.5cm;
+}
+
+.underline-text {
+  text-align: center;
+}
+
+.underline {
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.underline-text {
+  font-size: 8pt;
+}
+
+.main-text {
+  text-align: justify;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.table {
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.table .underline {
+  height: 20px;
+}
+.start-work, .difficulty {
+  width: 4.5cm;
+}
+
+.row1{
+  width: 12.5cm;
+}
+
+.row2-1 {
+  width: 4cm;
+}
+
+.end-work {
+  width: 3.5cm;
+}
+
+.row2-2 {
+  width: 5cm;
+}
+
+.time-spent {
+  width: 3.5cm;
+}
+
+.row3 {
+  width: 13.5cm;
+}
+
+.price {
+  width: 3cm;
+}
+
+.row4 {
+  width: 14cm;
+}
+
+.row5 {
+  width: 17cm;
+}
+
+.paid {
+  width: 4cm;
+}
+
+.row6 {
+  width: 13cm;
+}
+
+.need-to-pay {
+  width: 5.5cm;
+}
+
+.row7 {
+  width: 11.5cm;
+}
+
+.pdv {
+  width: 2cm;
+}
+
+.row8 {
+  width: 15cm;
+}
+
+.signatures {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.work-done {
+  width: 3cm;
+}
+
+.work-accepted {
+  width: 3.5cm;
+}
+
+.expert {
+  width: 8cm;
+}
+
+#testIn {
+  border: 1px solid red;
+}
