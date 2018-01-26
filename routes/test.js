@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const fileName = 'test2.pdf';
 const phantom = require('phantom');
+const fs = require('fs');
 let data;
 
 router.get('/', (req, res, next) => {
@@ -11,18 +12,26 @@ router.get('/', (req, res, next) => {
   res.render('form', data);
 });
 
-router.put('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
   console.log('this is test');
   // res.render('index');
-  // console.log(req.body);
+  console.log(req.body);
   data = req.body;
-  pdf(res);
-  // makePDF.next();
+  pdf();
+  // res.setHeader('Content-type', 'application/pdf');
+  // res.sendFile(path.join(__dirname.replace('routes', ''), fileName));
+  // const file = fs.readFileSync('./test2.pdf');
+  // res.contentType("application/pdf");
+  // res.send(file);
 });
 
+// async function () {
+//  await pdf();
+//  await
+// }
 
 //
-const pdf = async function(res) {
+const pdf = async function() {
   const instance = await phantom.create();
   const page = await instance.createPage();
   page.property('paperSize', { format: 'A4', orientation: 'portrait' });
@@ -30,8 +39,8 @@ const pdf = async function(res) {
   const status = await page.open('http://localhost:3000/test');
   await page.render(fileName);
   console.log('created test2.pdf');
-  console.log(__dirname.replace('routes', ''));
-  // await res.sendFile(path.join(__dirname.replace('routes', ''), fileName));
+  // console.log(path.join(__dirname.replace('routes', ''), fileName));
+  // await res.sendFile(fileName, { root : __dirname});
   await instance.exit();
 };
 

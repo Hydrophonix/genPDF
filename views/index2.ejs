@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="">
-  <div class="wrapper">
+<body class="body">
 
 
-  <div class="form">
+
+  <div class="form index-form">
     <header>
       <div class="header">Найменування замовника:</div>
       <div class="header">Найменування виконавця:</div>
@@ -38,12 +38,12 @@
       <div class="parties">
         <div class="text">Представник виконавця, судовий експерт</div>
         <div>
-          <div class="underline"><input name="expert" type="text" id="testIn"></div>
+          <div class="underline"><input name="expert" type="text" class="testIn"></div>
           <div class="underline-text">(посада, ПІБ)</div>
         </div>
         <div class="text">з однієї сторони та представник замовника</div>
         <div>
-          <div class="underline"><input name="zakaz" type="text" id="testIn"></div>
+          <div class="underline"><input name="zakaz" type="text" class="testIn"></div>
           <div class="underline-text">(посада, ПІБ, доручення)</div>
         </div>
       </div>
@@ -59,19 +59,19 @@
 
       <div class="table">
         <div class="difficulty">Категорія складності:</div>
-        <div class="underline row1">середня (143,00 грн/год)</div>
+        <div class="underline row1">середня (143.00 грн/год)</div>
         <div class="start-work">Приступив до роботи:</div>
         <div class="underline row2-1">01.01.1745</div>
         <div class="end-work">Закінчив роботу:</div>
         <div class="underline row2-2">01.01.2013</div>
         <div class="time-spent">Затрачено годин:</div>
-        <div class="underline row3">666</div>
+        <div class="underline row3"><input name="hours" type="number" class="testIn" id="workHours"></div>
         <div class="price">Ціна складає:</div>
         <div>
-          <div class="underline row4">1980,00 (666 &times; 143,00)</div>
+          <div class="underline row4" id="sum">0.00 (0 &times; 143.00)</div>
           <div class="underline-text">(затрачений час * на вартість експертогодини+20%)</div>
         </div>
-        <div class="underline row5">(одна тисяча дев'ятсот вісімдесят грн 00 коп)</div>
+        <div class="underline row5" id="sumWords">(нуль грн 00 коп)</div>
         <div class="paid">Наперед сплачено:</div>
         <div>
           <div class="underline row6"></div>
@@ -102,8 +102,8 @@
       </footer>
   </div>
 
+
   <button class="link" type="submit" id="link">GEN PDF</button>
-  </div>
   <script type="text/javascript" src="/js/script.js"></script>
 
 </body>

@@ -1,11 +1,11 @@
-body {
+.body {
   background: linear-gradient(to top, darkgrey 0%, lightgrey 100%);
   padding: 20px 0 200px;
 }
 
 .form {
   width: 21cm;
-  height: 29.6cm;
+  height: 29.65cm;
   padding: 2cm 1cm 1cm 3cm;
   box-sizing: border-box;
   background-color: #fff;
@@ -25,24 +25,9 @@ header,
   flex-wrap: wrap;
 }
 
-.wrapper {
+.index-form {
   margin: 0 auto;
-  width: 1000px;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
   box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
-
-}
-
-.link {
-  background-color: lightblue;
-  width: 100px;
-  height: 50px;
-  font-size: 16pt;
-}
-div {
-  /* border: 1px solid black; */
 }
 
 .header {
@@ -229,6 +214,24 @@ div {
   width: 8cm;
 }
 
-#testIn {
+.testIn {
   border: 1px solid red;
+}
+
+.link {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  background-color: lightblue;
+  width: 100px;
+  height: 50px;
+  font-size: 16pt;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+}
+
+.link:hover {
+  background-color: #e0ecff;
+  box-shadow: 0px 0px 3px 10px rgba(255,255,211,0.75);
 }
