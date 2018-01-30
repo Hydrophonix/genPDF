@@ -27,6 +27,7 @@ div.addEventListener('click', function() {
   // console.log(Array.from(inp, item => item.value));
   console.log(data);
   xhr.send(JSON.stringify(data));
+  setTimeout(() => window.open('/test/download'), 3000);
 })
 
 const sum = document.getElementById('sum');

@@ -8,14 +8,22 @@ let data;
 
 router.get('/', (req, res, next) => {
   console.log('get render');
-  console.log(data);
+  // console.log(data);
   res.render('form', data);
 });
+
+router.get('/download', (req, res, next) => {
+  console.log('get download');
+  res.download(path.join(__dirname.replace('routes', ''), fileName));
+});
+
 
 router.post('/', (req, res, next) => {
   console.log('this is test');
   // res.render('index');
   console.log(req.body);
+  res.render('form', data);
+  // res.render('form', req.body);
   data = req.body;
   pdf();
   // res.setHeader('Content-type', 'application/pdf');
@@ -36,7 +44,7 @@ const pdf = async function() {
   const page = await instance.createPage();
   page.property('paperSize', { format: 'A4', orientation: 'portrait' });
 
-  const status = await page.open('http://localhost:3000/test');
+  const status = await page.open('http://192.168.8.231:8080/test');
   await page.render(fileName);
   console.log('created test2.pdf');
   // console.log(path.join(__dirname.replace('routes', ''), fileName));
