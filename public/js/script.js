@@ -1,30 +1,33 @@
 const div = document.getElementById('link');
 let data = {};
 
-const xhr = new XMLHttpRequest();
-
-xhr.open('POST', '/test', true);
-xhr.setRequestHeader("Content-Type", "application/json");
-
-xhr.onreadystatechange = () => {
-  if (xhr.readyState != 4) return;
-  if (xhr.status != 200) {
-    console.log('error');
-  } else {
-    const data = JSON.parse(xhr.responseText);
-    if (data.status !== 'success') {
-      console.log('error');
-    }
-  }
-};
-
 div.addEventListener('click', function() {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('POST', '/test', true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState != 4) return;
+    if (xhr.status != 200) {
+      console.log('error');
+    } else {
+      const data = JSON.parse(xhr.responseText);
+      if (data.status !== 'success') {
+        console.log('error');
+      }
+    }
+  };
+
   const inp = document.getElementsByTagName('input');
+
   Array.from(inp, item => data[item.name] = item.value);
   data.sum = sum.textContent;
   data.sumWords = sumWords.textContent;
-  // console.log(2);
-  // console.log(Array.from(inp, item => item.value));
+  data.organization = document.getElementById('organization').value;
+  data.zayava = document.getElementById('zayava').value;
+  data.skladnist = document.getElementById('skladnist').value;
+  data.tup = document.getElementById('tup').value;
   console.log(data);
   xhr.send(JSON.stringify(data));
   setTimeout(() => window.open('/test/download'), 3000);
@@ -67,4 +70,6 @@ function wordsIteration(item) {
   }
 }
 
-// console.log(toWords);
+document.getElementById('expert').addEventListener('change', () =>
+  document.getElementById('expert2').textContent = `_____________ ${document.getElementById('expert').value}`
+);

@@ -13,24 +13,24 @@
     <header>
       <div class="header">Найменування замовника:</div>
       <div class="header">Найменування виконавця:</div>
-      <div class="organization">Генеральна прокуратура України</div>
+      <div class="organization"><%= organization %></div>
       <div class="organization">
         <p>Київський науково-дослідний інститут судових експертизи</p>
         <p>Міністерства юстиції України</p>
       </div>
-      <div class="adress">адреса: вул. Смоленська, 6, м. Київ, 03057</div>
+      <div class="adress"><%= address %></div>
       <div class="adress">адреса: вул. Смоленська, 6, м. Київ, 03057</div>
     </header>
     <main>
       <div class="doc-name">
         <span>АКТ</span>
-        <p>здачі-приймання висновку експерта № 12345/18-35</p>
-        <p>у кримінальному провадженні № 42016000000003536</p>
-        <p>за постановою слідчого Важливого Д.Д.</p>
-        <p>від 01.01.2018</p>
+        <p>здачі-приймання висновку експерта № <%= expertuza %></p>
+        <p>у <%= zayava %> № <%= provad %></p>
+        <p>за <%= tup %> <%= postanova %></p>
+        <p>від <%= dataProv %></p>
       </div>
 
-      <div class="date">01.01.2018</div>
+      <div class="date"><%= dataExp %></div>
 
       <div class="parties">
         <div class="text">Представник виконавця, судовий експерт</div>
@@ -56,11 +56,11 @@
 
       <div class="table">
         <div class="difficulty">Категорія складності:</div>
-        <div class="underline row1">середня (143,00 грн/год)</div>
+        <div class="underline row1"><%= skladnist %> (143,00 грн/год)</div>
         <div class="start-work">Приступив до роботи:</div>
-        <div class="underline row2-1">01.01.1745</div>
+        <div class="underline row2-1"><%= dataStart %></div>
         <div class="end-work">Закінчив роботу:</div>
-        <div class="underline row2-2">01.01.2013</div>
+        <div class="underline row2-2"><%= dataFinish %></div>
         <div class="time-spent">Затрачено годин:</div>
         <div class="underline row3"><%= hours %></div>
         <div class="price">Ціна складає:</div>
@@ -71,17 +71,17 @@
         <div class="underline row5"><%= sumWords %></div>
         <div class="paid">Наперед сплачено:</div>
         <div>
-          <div class="underline row6"></div>
+          <div class="underline row6"><%= napered %></div>
           <div class="underline-text">(сума вказується цифрами і прописом)</div>
         </div>
         <div class="need-to-pay">Належить до перерахування:</div>
         <div>
-          <div class="underline row7"></div>
+          <div class="underline row7"><%= pereraxyn %></div>
           <div class="underline-text">(сума вказується цифрами і прописом)</div>
         </div>
         <div class="pdv">ПДВ 20%</div>
         <div>
-          <div class="underline row8"></div>
+          <div class="underline row8"><%= pdv %></div>
           <div class="underline-text">(сума вказується цифрою)</div>
         </div>
       </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="signatures">
           <div class="date work-done">Роботу здав:</div>
-          <div class="expert">_____________ Тимко Є.В.</div>
+          <div class="expert">_____________ <%= expert %></div>
           <div class="date work-accepted">Роботу прийняв:</div>
           <div>_____________</div>
         </div>
