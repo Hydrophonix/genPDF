@@ -9,7 +9,8 @@ let data;
 router.get('/', (req, res, next) => {
   console.log('get render');
   // console.log(data);
-  res.render('form', data);
+  // res.render('form', data); //1st version with form
+  res.render('resume'); // for resume static
 });
 
 router.get('/download', (req, res, next) => {
@@ -44,7 +45,7 @@ const pdf = async function() {
   const page = await instance.createPage();
   page.property('paperSize', { format: 'A4', orientation: 'portrait' });
 
-  const status = await page.open('http://192.168.8.231:8080/test');
+  const status = await page.open('http://localhost:8080/test');
   await page.render(fileName);
   console.log('created test2.pdf');
   // console.log(path.join(__dirname.replace('routes', ''), fileName));

@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "phantom": "./node_modules/.bin/phantomjs make.js index.html test.pdf",
-    "easy": "./node_modules/.bin/phantomjs test.js",
+    "pdf": "./node_modules/.bin/phantomjs test.js",
     "start": "node app.js"
   },
-  "author": "",
+  "author": "Hydrophonix",
   "license": "ISC",
   "dependencies": {
     "body-parser": "~1.18.2",
