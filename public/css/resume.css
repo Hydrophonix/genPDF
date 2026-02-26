@@ -121,7 +121,8 @@ nav {
 
 .github,
 .skype,
-.mail {
+.mail,
+.phone {
   text-decoration: none;
   color: #FFF;
 }
@@ -139,7 +140,7 @@ main {
 .lagnuages,
 .tech__skill,
 .soft__skill {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 main h3 {
@@ -156,8 +157,10 @@ main span {
 }
 
 main p {
-  margin-bottom: 10px;
-  line-height: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 18px;
 }
 
 main i {
@@ -174,7 +177,7 @@ main b {
 .line {
   height: 2px;
   background-color: lightgray;
-  margin: 10px 0;
+  margin: 7px 0;
 }
 
 .skills,
@@ -203,3 +206,8 @@ main b {
   border-radius: 5px;
   border: 2px solid grey;
 }
+
+.objective {
+  margin-top: 40px;
+  margin-bottom: 10px;
+} 

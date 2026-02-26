@@ -1,15 +1,16 @@
+// Core
+const http = require('http');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const app = express();
-// const dns = require('dns');
 
+const app = express();
 const index = require('./routes/index');
 const test = require('./routes/test');
 // const download = require('./routes/download');
 
-const http = require('http');
+
 const httpServer = http.createServer(app);
 const port = 8080;
 const address = '172.16.151.61';
