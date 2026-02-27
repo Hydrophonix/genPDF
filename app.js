@@ -6,9 +6,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const app = express();
-const index = require('./routes/index');
-const test = require('./routes/test');
-// const download = require('./routes/download');
+const cv = require('./routes/cv');
 
 
 const httpServer = http.createServer(app);
@@ -24,19 +22,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/test', test);
-// app.use('/download', download);
+app.use('/cv', cv);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
-// dns.lookup('akt.pdf', (err, address, family) => {
-//   console.log(`address: ${address} family: ${family}`);
-// });
 
 httpServer.listen({ port, address, family }, () =>
   console.log(`listening on http://localhost:${port}`));

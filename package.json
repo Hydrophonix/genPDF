@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "phantom": "./node_modules/.bin/phantomjs make.js index.html test.pdf",
-    "pdf": "./node_modules/.bin/phantomjs test.js",
+   "pdf": "./node_modules/.bin/phantomjs gen-cv.js",
+   "pdf-chrome": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --print-to-pdf=\"VMikoliuk CV.pdf\" --print-to-pdf-no-header \"http://localhost:8080/cv\"",
     "start": "node app.js"
   },
   "author": "Hydrophonix",

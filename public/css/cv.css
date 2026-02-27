@@ -1,3 +1,8 @@
+@page {
+  size: 210mm 297mm;  /* A4 */
+  margin: 0;
+}
+
 @font-face {
     font-family: 'Helvetica Neue Regular';
     src: url('../fonts/helveticaneue-thin-webfont.eot');
@@ -21,8 +26,8 @@
   font-weight: 500;
   font-size: 17px;
   box-sizing: border-box;
-  width: 21cm;
-  height: 29.6cm;
+  width: 210mm;
+  height: 297mm;
   background-color: #FAFAFA;
 }
 
@@ -91,10 +96,18 @@ nav {
   padding-right: 20px;
 }
 
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  margin-bottom: 250px;
+}
+
 .skype,
 .location,
 .mail,
 .phone,
+.linkedin,
 .calendar,
 .github {
   display: -webkit-flex;
@@ -112,6 +125,7 @@ nav {
 .mail img,
 .phone img,
 .calendar img,
+.linkedin img,
 .github img
  {
   max-width: 20px;
@@ -122,6 +136,7 @@ nav {
 .github,
 .skype,
 .mail,
+.linkedin,
 .phone {
   text-decoration: none;
   color: #FFF;
@@ -130,9 +145,6 @@ nav {
 main {
   box-sizing: border-box;
   padding: 25px;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
 }
 
 .education,
@@ -151,33 +163,54 @@ main h3 {
 }
 
 main span {
+  font-size: 16px;
+  line-height: 18px;
   display: block;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 main p {
-  font-weight: normal;
-  font-size: 16px;
-  margin-bottom: 5px;
-  line-height: 18px;
+  font-family: 'Helvetica Neue Regular', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  margin: 5px 0;
+  line-height: 16px;
 }
 
+
 main i {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 18px;
   color: #3f59a8;
   font-style: italic;
-  margin-bottom: 15px;
 }
 
 main b {
+  font-size: 14px;
+  font-family: 'Helvetica Neue Bold', Tahoma, sans-serif;
   font-weight: bold;
 }
 
 .line {
-  height: 2px;
-  background-color: lightgray;
-  margin: 7px 0;
+  height: 3px;
+  background-color: #3f59a8;
+  margin: 10px 0;
+}
+
+main ul {
+  list-style-type: disc;
+  padding-left: 8px;
+}
+
+main ul li {
+  font-family: 'Helvetica Neue Regular', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 16px;
+  list-style-position: inside;
 }
 
 .skills,
